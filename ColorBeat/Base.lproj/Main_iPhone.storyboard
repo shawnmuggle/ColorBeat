@@ -78,11 +78,11 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h0N-kw-7pj" userLabel="View-Quiz" customClass="RoundedCornerView">
-                                <rect key="frame" x="0.0" y="132" width="320" height="344"/>
+                                <rect key="frame" x="20" y="132" width="280" height="344"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MDe-mK-jet" userLabel="View-Buttons">
-                                <rect key="frame" x="0.0" y="484" width="320" height="64"/>
+                                <rect key="frame" x="20" y="484" width="280" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="5DL-IS-3fd"/>
@@ -91,14 +91,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="MDe-mK-jet" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="8eu-gN-V81"/>
                             <constraint firstItem="MDe-mK-jet" firstAttribute="top" secondItem="h0N-kw-7pj" secondAttribute="bottom" constant="8" id="Dk9-kq-4oB"/>
-                            <constraint firstItem="h0N-kw-7pj" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="EnV-V3-6iu"/>
-                            <constraint firstItem="MDe-mK-jet" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="LqU-FC-Km9"/>
                             <constraint firstItem="h0N-kw-7pj" firstAttribute="top" secondItem="bSS-EX-fZ5" secondAttribute="bottom" constant="8" id="My3-Lr-HHX"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="MDe-mK-jet" secondAttribute="bottom" constant="20" id="PYR-I6-G3F"/>
-                            <constraint firstAttribute="trailing" secondItem="MDe-mK-jet" secondAttribute="trailing" id="dJ3-N3-MeX"/>
                             <constraint firstItem="bSS-EX-fZ5" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="gom-T7-iv8"/>
-                            <constraint firstAttribute="trailing" secondItem="h0N-kw-7pj" secondAttribute="trailing" id="rRJ-Wf-Ohj"/>
+                            <constraint firstAttribute="trailing" secondItem="h0N-kw-7pj" secondAttribute="trailing" constant="20" id="hQh-fc-EeN"/>
+                            <constraint firstItem="h0N-kw-7pj" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="ny4-KZ-mu1"/>
+                            <constraint firstAttribute="trailing" secondItem="MDe-mK-jet" secondAttribute="trailing" constant="20" id="xll-Jl-aM8"/>
                             <constraint firstItem="bSS-EX-fZ5" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="yy5-rO-SSe"/>
                             <constraint firstAttribute="trailing" secondItem="bSS-EX-fZ5" secondAttribute="trailing" id="zuh-sh-0bj"/>
                         </constraints>
