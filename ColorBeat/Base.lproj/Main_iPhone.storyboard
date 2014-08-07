@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5023" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vAP-Zc-rKQ">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--Color Beat View Controller - Color Beat-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ColorBeatViewController" sceneMemberID="viewController">
@@ -15,11 +15,71 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bSS-EX-fZ5" userLabel="View-Status">
+                                <rect key="frame" x="0.0" y="64" width="320" height="60"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uLa-cF-85C" userLabel="View-Quiz">
+                                <rect key="frame" x="0.0" y="132" width="320" height="321"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WKr-fQ-RFZ" userLabel="View-Button">
+                                <rect key="frame" x="0.0" y="461" width="320" height="64"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UCc-81-ahA" userLabel="View-Space">
+                                <rect key="frame" x="0.0" y="533" width="320" height="35"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uLa-cF-85C" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="132" id="1rd-pt-X7E"/>
+                            <constraint firstItem="uLa-cF-85C" firstAttribute="leading" secondItem="WKr-fQ-RFZ" secondAttribute="leading" id="913-kV-2nj"/>
+                            <constraint firstItem="UCc-81-ahA" firstAttribute="leading" secondItem="WKr-fQ-RFZ" secondAttribute="leading" id="9Ae-v0-AtU"/>
+                            <constraint firstItem="WKr-fQ-RFZ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Als-MX-fcg"/>
+                            <constraint firstAttribute="bottom" secondItem="UCc-81-ahA" secondAttribute="bottom" id="IcG-pi-c1C"/>
+                            <constraint firstItem="uLa-cF-85C" firstAttribute="top" secondItem="bSS-EX-fZ5" secondAttribute="bottom" constant="8" symbolic="YES" id="PJh-f3-0us"/>
+                            <constraint firstItem="WKr-fQ-RFZ" firstAttribute="trailing" secondItem="UCc-81-ahA" secondAttribute="trailing" id="QVn-vM-wOX"/>
+                            <constraint firstItem="WKr-fQ-RFZ" firstAttribute="top" secondItem="uLa-cF-85C" secondAttribute="bottom" constant="8" symbolic="YES" id="RuT-3M-AXE"/>
+                            <constraint firstItem="UCc-81-ahA" firstAttribute="top" secondItem="WKr-fQ-RFZ" secondAttribute="bottom" constant="8" symbolic="YES" id="Svo-vQ-xRC"/>
+                            <constraint firstItem="UCc-81-ahA" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="533" id="XZl-lS-BIw"/>
+                            <constraint firstAttribute="trailing" secondItem="uLa-cF-85C" secondAttribute="trailing" id="Xkw-hM-8g0"/>
+                            <constraint firstItem="bSS-EX-fZ5" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="e76-dv-0if"/>
+                            <constraint firstItem="uLa-cF-85C" firstAttribute="trailing" secondItem="WKr-fQ-RFZ" secondAttribute="trailing" id="e8x-0U-PyY"/>
+                            <constraint firstItem="bSS-EX-fZ5" firstAttribute="trailing" secondItem="uLa-cF-85C" secondAttribute="trailing" id="iel-Ko-2xm"/>
+                            <constraint firstItem="bSS-EX-fZ5" firstAttribute="leading" secondItem="uLa-cF-85C" secondAttribute="leading" id="ljZ-bf-GiQ"/>
+                            <constraint firstItem="WKr-fQ-RFZ" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="461" id="p6D-08-rIH"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Color Beat" id="0i1-le-Wcm"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="799" y="138"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="myT-p9-axv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vAP-Zc-rKQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HIB-kQ-DYY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="dL8-xJ-3Ia"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CCW-qu-rs5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="324" y="138"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

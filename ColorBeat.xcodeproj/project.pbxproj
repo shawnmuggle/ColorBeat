@@ -15,13 +15,16 @@
 		EBBDEB35199357620011B135 /* ColorBeatAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBDEB34199357620011B135 /* ColorBeatAppDelegate.m */; };
 		EBBDEB38199357620011B135 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBDEB36199357620011B135 /* Main_iPhone.storyboard */; };
 		EBBDEB3B199357620011B135 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBDEB39199357620011B135 /* Main_iPad.storyboard */; };
-		EBBDEB3E199357620011B135 /* ColorBeatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBDEB3D199357620011B135 /* ColorBeatViewController.m */; };
 		EBBDEB40199357620011B135 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBBDEB3F199357620011B135 /* Images.xcassets */; };
 		EBBDEB47199357620011B135 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBBDEB46199357620011B135 /* XCTest.framework */; };
 		EBBDEB48199357620011B135 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBBDEB24199357620011B135 /* Foundation.framework */; };
 		EBBDEB49199357620011B135 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBBDEB28199357620011B135 /* UIKit.framework */; };
 		EBBDEB51199357620011B135 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EBBDEB4F199357620011B135 /* InfoPlist.strings */; };
 		EBBDEB53199357620011B135 /* ColorBeatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBDEB52199357620011B135 /* ColorBeatTests.m */; };
+		EBBDEB5E199357830011B135 /* ColorUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBDEB5D199357830011B135 /* ColorUtils.m */; };
+		EBBDEB611993578C0011B135 /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBDEB601993578C0011B135 /* ResultViewController.m */; };
+		EBBDEB64199357930011B135 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBDEB63199357930011B135 /* HelpViewController.m */; };
+		EBBDEB67199357BE0011B135 /* ColorBeatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBDEB66199357BE0011B135 /* ColorBeatViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,14 +50,20 @@
 		EBBDEB34199357620011B135 /* ColorBeatAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorBeatAppDelegate.m; sourceTree = "<group>"; };
 		EBBDEB37199357620011B135 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		EBBDEB3A199357620011B135 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		EBBDEB3C199357620011B135 /* ColorBeatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorBeatViewController.h; sourceTree = "<group>"; };
-		EBBDEB3D199357620011B135 /* ColorBeatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorBeatViewController.m; sourceTree = "<group>"; };
 		EBBDEB3F199357620011B135 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EBBDEB45199357620011B135 /* ColorBeatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorBeatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBBDEB46199357620011B135 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		EBBDEB4E199357620011B135 /* ColorBeatTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ColorBeatTests-Info.plist"; sourceTree = "<group>"; };
 		EBBDEB50199357620011B135 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EBBDEB52199357620011B135 /* ColorBeatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorBeatTests.m; sourceTree = "<group>"; };
+		EBBDEB5C199357830011B135 /* ColorUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorUtils.h; sourceTree = "<group>"; };
+		EBBDEB5D199357830011B135 /* ColorUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorUtils.m; sourceTree = "<group>"; };
+		EBBDEB5F1993578C0011B135 /* ResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultViewController.h; sourceTree = "<group>"; };
+		EBBDEB601993578C0011B135 /* ResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultViewController.m; sourceTree = "<group>"; };
+		EBBDEB62199357930011B135 /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
+		EBBDEB63199357930011B135 /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
+		EBBDEB65199357BE0011B135 /* ColorBeatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorBeatViewController.h; sourceTree = "<group>"; };
+		EBBDEB66199357BE0011B135 /* ColorBeatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorBeatViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,12 +123,16 @@
 		EBBDEB2A199357620011B135 /* ColorBeat */ = {
 			isa = PBXGroup;
 			children = (
-				EBBDEB33199357620011B135 /* ColorBeatAppDelegate.h */,
-				EBBDEB34199357620011B135 /* ColorBeatAppDelegate.m */,
 				EBBDEB36199357620011B135 /* Main_iPhone.storyboard */,
 				EBBDEB39199357620011B135 /* Main_iPad.storyboard */,
-				EBBDEB3C199357620011B135 /* ColorBeatViewController.h */,
-				EBBDEB3D199357620011B135 /* ColorBeatViewController.m */,
+				EBBDEB62199357930011B135 /* HelpViewController.h */,
+				EBBDEB63199357930011B135 /* HelpViewController.m */,
+				EBBDEB65199357BE0011B135 /* ColorBeatViewController.h */,
+				EBBDEB66199357BE0011B135 /* ColorBeatViewController.m */,
+				EBBDEB5F1993578C0011B135 /* ResultViewController.h */,
+				EBBDEB601993578C0011B135 /* ResultViewController.m */,
+				EBBDEB5C199357830011B135 /* ColorUtils.h */,
+				EBBDEB5D199357830011B135 /* ColorUtils.m */,
 				EBBDEB3F199357620011B135 /* Images.xcassets */,
 				EBBDEB2B199357620011B135 /* Supporting Files */,
 			);
@@ -129,6 +142,8 @@
 		EBBDEB2B199357620011B135 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EBBDEB33199357620011B135 /* ColorBeatAppDelegate.h */,
+				EBBDEB34199357620011B135 /* ColorBeatAppDelegate.m */,
 				EBBDEB2C199357620011B135 /* ColorBeat-Info.plist */,
 				EBBDEB2D199357620011B135 /* InfoPlist.strings */,
 				EBBDEB30199357620011B135 /* main.m */,
@@ -255,8 +270,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBBDEB35199357620011B135 /* ColorBeatAppDelegate.m in Sources */,
-				EBBDEB3E199357620011B135 /* ColorBeatViewController.m in Sources */,
+				EBBDEB64199357930011B135 /* HelpViewController.m in Sources */,
 				EBBDEB31199357620011B135 /* main.m in Sources */,
+				EBBDEB611993578C0011B135 /* ResultViewController.m in Sources */,
+				EBBDEB67199357BE0011B135 /* ColorBeatViewController.m in Sources */,
+				EBBDEB5E199357830011B135 /* ColorUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

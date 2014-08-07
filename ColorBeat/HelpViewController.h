@@ -1,5 +1,5 @@
 //
-//  ColorTellerViewController.h
+//  HelpViewController.h
 //  ColorTeller
 //
 //  Created by Le Yu on 8/5/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ColorBeatViewController : UIViewController
+@interface HelpViewController : UIViewController
 
 @end
