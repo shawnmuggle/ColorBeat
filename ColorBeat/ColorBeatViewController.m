@@ -13,6 +13,7 @@
 
 @interface ColorBeatViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *timerTextView;
+@property (weak, nonatomic) IBOutlet UILabel *scoreView;
 
 @property (weak, nonatomic) IBOutlet RoundedCornerView *quizColorView;
 @property (weak, nonatomic) IBOutlet UILabel *quizTextView;
@@ -23,6 +24,7 @@
 @property (weak, nonatomic) NSTimer *timer;
 
 @property (nonatomic) NSInteger count;
+@property (nonatomic) CGFloat timerFloat;
 
 @end
 
@@ -32,10 +34,18 @@
 
 #pragma mark Controller
 
-//- (void)clickColor:(UIButton *)sender {
-//    [self checkAnswer:sender.backgroundColor];
-//    [self changePuzzle];
-//}
+- (void)setCount:(NSInteger)count
+{
+    _count = count;
+    self.scoreView.text = [NSString stringWithFormat:@"%d", (int)count];
+    
+}
+
+- (void)setTimerFloat:(CGFloat)timerFloat
+{
+    _timerFloat = timerFloat;
+    self.timerTextView.text = [NSString stringWithFormat:@"%.01f", timerFloat];
+}
 
 - (void)changePuzzle
 {
@@ -55,35 +65,35 @@
     self.quizTextView.text = [ColorUtils randomColorText];
 }
 
-- (void)checkAnswer:(UIColor *)buttonBackgroundColor
+- (void)checkAnswer:(NSUInteger)indexOfButtonIndex
 {
     
     NSArray *colorNames = [ColorUtils validColorNames];
-    NSArray *colors = [ColorUtils validColors];
-    
     NSUInteger indexOfTextNameInArray = [colorNames indexOfObject:self.quizTextView.text];
-    NSUInteger indexOfButtonColorInArray = [colors indexOfObject:buttonBackgroundColor];
     
-    if (indexOfTextNameInArray == indexOfButtonColorInArray)
+    if (indexOfTextNameInArray == indexOfButtonIndex)
     {
-        self.count += 10;
+        self.count += 1;
     }
     else
     {
-        self.count -= 5;
     }
 }
 
 - (void)updateTimer:(id)sender
 {
-    NSString *timeString = self.timerTextView.text;
-    float timeFloat = [timeString floatValue];
-    timeFloat -= 0.1;
-    if (timeFloat <= 0) {
+    self.timerFloat -= 0.1;
+    if (self.timerFloat <= 0) {
         [self performSegueWithIdentifier:@"Result" sender:self];
-        timeFloat = TIMER_COUNT;
+        self.timerFloat = TIMER_COUNT;
     }
-    self.timerTextView.text = [NSString stringWithFormat:@"%.01f", timeFloat];
+}
+
+- (void)buttonTapped:(UITapGestureRecognizer *)gr {
+    RoundedCornerView *buttonView = (RoundedCornerView *)gr.view;
+    NSUInteger buttonIndex = [self.buttonsView.subviews indexOfObject:buttonView];
+    [self checkAnswer:buttonIndex];
+    [self changePuzzle];
     
 }
 
@@ -111,6 +121,10 @@
         RoundedCornerView *buttonView = [[RoundedCornerView alloc] initWithFrame:buttonFrame];
         [buttonView commonInit];
         buttonView.backgroundColor = colors[i];
+        
+        UITapGestureRecognizer *tapGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(buttonTapped:)];
+        [buttonView addGestureRecognizer:tapGR];
+        
         [self.buttonsView addSubview:buttonView];
     }
 }
@@ -149,6 +163,7 @@
         if ([segue.destinationViewController isKindOfClass:[ResultViewController class]]) {
             ResultViewController *vc = (ResultViewController *)segue.destinationViewController;
             vc.score = self.count;
+            self.count = 0;
         }
     }
 

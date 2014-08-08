@@ -127,6 +127,7 @@
                         <outlet property="buttonsView" destination="MDe-mK-jet" id="y5c-Ef-kLK"/>
                         <outlet property="quizColorView" destination="h0N-kw-7pj" id="ECM-8p-j3Q"/>
                         <outlet property="quizTextView" destination="Ny2-U5-IdO" id="Qtd-tj-ERZ"/>
+                        <outlet property="scoreView" destination="E8L-q0-J2l" id="ncF-tm-aEh"/>
                         <outlet property="timerTextView" destination="11u-0D-yx7" id="AHv-qf-szZ"/>
                         <segue destination="KAf-ZT-r9e" kind="push" identifier="Result" id="JK3-2b-MPK"/>
                     </connections>
