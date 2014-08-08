@@ -12,7 +12,6 @@
 #import "ColorUtils.h"
 
 @interface ColorBeatViewController ()
-@property (weak, nonatomic) IBOutlet UILabel *scoreTextView;
 @property (weak, nonatomic) IBOutlet UILabel *timerTextView;
 
 @property (weak, nonatomic) IBOutlet RoundedCornerView *quizColorView;
@@ -32,11 +31,6 @@
 #define TIMER_COUNT 10.0
 
 #pragma mark Controller
-- (void)setCount:(NSInteger)count
-{
-    _count = count;
-    self.scoreTextView.text = [NSString stringWithFormat:@"SCORE: %d", (int)self.count];
-}
 
 //- (void)clickColor:(UIButton *)sender {
 //    [self checkAnswer:sender.backgroundColor];
@@ -95,6 +89,12 @@
 
 - (void)addQuizButtons
 {
+    
+    for (UIView *subView in self.buttonsView.subviews)
+    {
+        [subView removeFromSuperview];
+    }
+    
     CGRect frame = self.buttonsView.bounds;
     NSLog(@"=======> Frame  %f %f %f %f", frame.origin.x, frame.origin.y, frame.size.width, frame.size.height);
     
@@ -112,21 +112,21 @@
         NSLog(@"=======> SubFrame  %f %f %f %f", buttonFrame.origin.x, buttonFrame.origin.y, buttonFrame.size.width, buttonFrame.size.height);
         
 
-        UIView *buttonView = [[UIView alloc] initWithFrame:buttonFrame];
+        RoundedCornerView *buttonView = [[RoundedCornerView alloc] initWithFrame:buttonFrame];
         buttonView.backgroundColor = colors[i];
         [self.buttonsView addSubview:buttonView];
     }
-    NSLog(@"===> %d", (int)[self.buttonsView.subviews count]);
-    
-
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self addQuizButtons];
     [self changePuzzle];
+}
 
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+{
+    [self addQuizButtons];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -138,6 +138,8 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    [self addQuizButtons];
+
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTimer:) userInfo:nil repeats:YES];
 }
 
@@ -150,7 +152,6 @@
         if ([segue.destinationViewController isKindOfClass:[ResultViewController class]]) {
             ResultViewController *vc = (ResultViewController *)segue.destinationViewController;
             vc.score = self.count;
-            // self.count = 0;
         }
     }
 
