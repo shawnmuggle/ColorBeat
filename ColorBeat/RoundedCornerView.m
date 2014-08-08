@@ -29,7 +29,7 @@
     return self;
 }
 
-- (void)commonInit;
+- (void)commonInit
 {
     CALayer *layer = self.layer;
     layer.cornerRadius  = 10.0f;

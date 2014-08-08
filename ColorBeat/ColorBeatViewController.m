@@ -77,13 +77,13 @@
 - (void)updateTimer:(id)sender
 {
     NSString *timeString = self.timerTextView.text;
-    NSInteger timeInt = [timeString intValue];
-    timeInt--;
-    if (timeInt == 0) {
+    float timeFloat = [timeString floatValue];
+    timeFloat -= 0.1;
+    if (timeFloat <= 0) {
         [self performSegueWithIdentifier:@"Result" sender:self];
-        timeInt = TIMER_COUNT;
+        timeFloat = TIMER_COUNT;
     }
-    self.timerTextView.text = [NSString stringWithFormat:@"%d", (int)timeInt];
+    self.timerTextView.text = [NSString stringWithFormat:@"%.01f", timeFloat];
     
 }
 
@@ -96,7 +96,6 @@
     }
     
     CGRect frame = self.buttonsView.bounds;
-    // NSLog(@"=======> Frame  %f %f %f %f", frame.origin.x, frame.origin.y, frame.size.width, frame.size.height);
     
     NSArray *colors = [ColorUtils validColors];
     NSUInteger count = [colors count];
@@ -108,11 +107,9 @@
     for (int i = 0; i < count; i++ ) {
         CGRect buttonFrame = CGRectMake(frame.origin.x + i * gap + i * width
                                         , frame.origin.y, width, height);
-        
-        // NSLog(@"=======> SubFrame  %f %f %f %f", buttonFrame.origin.x, buttonFrame.origin.y, buttonFrame.size.width, buttonFrame.size.height);
-        
 
         RoundedCornerView *buttonView = [[RoundedCornerView alloc] initWithFrame:buttonFrame];
+        [buttonView commonInit];
         buttonView.backgroundColor = colors[i];
         [self.buttonsView addSubview:buttonView];
     }
@@ -140,7 +137,7 @@
     [super viewDidAppear:animated];
     [self addQuizButtons];
 
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTimer:) userInfo:nil repeats:YES];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(updateTimer:) userInfo:nil repeats:YES];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
