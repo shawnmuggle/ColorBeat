@@ -93,9 +93,38 @@
     
 }
 
+- (void)addQuizButtons
+{
+    CGRect frame = self.buttonsView.bounds;
+    NSLog(@"=======> Frame  %f %f %f %f", frame.origin.x, frame.origin.y, frame.size.width, frame.size.height);
+    
+    NSArray *colors = [ColorUtils validColors];
+    NSUInteger count = [colors count];
+
+    CGFloat height = frame.size.height;
+    CGFloat gap = 8;
+    CGFloat width = (frame.size.width - (count-1) * gap) / count;
+    
+    for (int i = 0; i < count; i++ ) {
+        CGRect buttonFrame = CGRectMake(frame.origin.x + i * gap + i * width
+                                        , frame.origin.y, width, height);
+        
+        NSLog(@"=======> SubFrame  %f %f %f %f", buttonFrame.origin.x, buttonFrame.origin.y, buttonFrame.size.width, buttonFrame.size.height);
+        
+
+        UIView *buttonView = [[UIView alloc] initWithFrame:buttonFrame];
+        buttonView.backgroundColor = colors[i];
+        [self.buttonsView addSubview:buttonView];
+    }
+    NSLog(@"===> %d", (int)[self.buttonsView.subviews count]);
+    
+
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self addQuizButtons];
     [self changePuzzle];
 
 }
