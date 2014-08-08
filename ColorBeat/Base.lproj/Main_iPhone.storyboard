@@ -165,21 +165,28 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time's Up!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2M-tD-PN7">
-                                <rect key="frame" x="84" y="74" width="152" height="68"/>
+                                <rect key="frame" x="84" y="74" width="152" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="68" id="ogl-AA-6ZJ"/>
+                                    <constraint firstAttribute="height" constant="50" id="ogl-AA-6ZJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="textColor" red="0.39542809311224492" green="0.37156742644121815" blue="0.34916466817997854" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7kY-4d-92X" userLabel="View-Score" customClass="RoundedCornerView">
-                                <rect key="frame" x="95" y="162" width="130" height="60"/>
+                                <rect key="frame" x="95" y="129" width="130" height="60"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SCORE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l0y-Ns-pAo">
+                                        <rect key="frame" x="36" y="8" width="59" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iFU-Fx-cSV">
-                                        <rect key="frame" x="15" y="36" width="100" height="21"/>
+                                        <rect key="frame" x="15" y="31" width="100" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -193,7 +200,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CrD-er-Etw" userLabel="View-Score" customClass="RoundedCornerView">
-                                <rect key="frame" x="95" y="409" width="130" height="40"/>
+                                <rect key="frame" x="95" y="444" width="130" height="40"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RETRY" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O2L-UA-Umd">
@@ -211,7 +218,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3lW-bE-i6f" userLabel="View-Score" customClass="RoundedCornerView">
-                                <rect key="frame" x="95" y="468" width="130" height="40"/>
+                                <rect key="frame" x="95" y="503" width="130" height="40"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SHARE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="01M-mo-BoY">
@@ -228,13 +235,6 @@
                                     <constraint firstAttribute="width" constant="130" id="lzB-HS-1z4"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SCORE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l0y-Ns-pAo">
-                                <rect key="frame" x="131" y="171" width="59" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -243,12 +243,13 @@
                             <constraint firstItem="d2M-tD-PN7" firstAttribute="centerX" secondItem="kGy-hX-YF7" secondAttribute="centerX" id="RRf-24-lG4"/>
                             <constraint firstAttribute="centerX" secondItem="CrD-er-Etw" secondAttribute="centerX" id="Wr6-bH-sxK"/>
                             <constraint firstAttribute="centerX" secondItem="3lW-bE-i6f" secondAttribute="centerX" id="Wsy-2L-cji"/>
-                            <constraint firstItem="7kY-4d-92X" firstAttribute="top" secondItem="d2M-tD-PN7" secondAttribute="bottom" constant="20" id="j1X-M0-zDn"/>
+                            <constraint firstItem="7kY-4d-92X" firstAttribute="top" secondItem="d2M-tD-PN7" secondAttribute="bottom" constant="5" id="j1X-M0-zDn"/>
                             <constraint firstItem="d2M-tD-PN7" firstAttribute="top" secondItem="pDt-Jd-Aj5" secondAttribute="bottom" constant="10" id="oV6-TF-zW3"/>
-                            <constraint firstItem="y9Q-fx-gUl" firstAttribute="top" secondItem="3lW-bE-i6f" secondAttribute="bottom" constant="60" id="oyQ-ps-xW3"/>
+                            <constraint firstItem="y9Q-fx-gUl" firstAttribute="top" secondItem="3lW-bE-i6f" secondAttribute="bottom" constant="25" id="oyQ-ps-xW3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cfI-4A-p6z"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PuO-3t-WNN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
