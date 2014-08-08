@@ -96,7 +96,7 @@
     }
     
     CGRect frame = self.buttonsView.bounds;
-    NSLog(@"=======> Frame  %f %f %f %f", frame.origin.x, frame.origin.y, frame.size.width, frame.size.height);
+    // NSLog(@"=======> Frame  %f %f %f %f", frame.origin.x, frame.origin.y, frame.size.width, frame.size.height);
     
     NSArray *colors = [ColorUtils validColors];
     NSUInteger count = [colors count];
@@ -109,7 +109,7 @@
         CGRect buttonFrame = CGRectMake(frame.origin.x + i * gap + i * width
                                         , frame.origin.y, width, height);
         
-        NSLog(@"=======> SubFrame  %f %f %f %f", buttonFrame.origin.x, buttonFrame.origin.y, buttonFrame.size.width, buttonFrame.size.height);
+        // NSLog(@"=======> SubFrame  %f %f %f %f", buttonFrame.origin.x, buttonFrame.origin.y, buttonFrame.size.width, buttonFrame.size.height);
         
 
         RoundedCornerView *buttonView = [[RoundedCornerView alloc] initWithFrame:buttonFrame];
