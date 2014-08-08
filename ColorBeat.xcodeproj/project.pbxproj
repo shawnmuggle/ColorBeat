@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB5C11D81994BE9600C0EA9F /* Game.wav in Resources */ = {isa = PBXBuildFile; fileRef = EB5C11D51994BE9600C0EA9F /* Game.wav */; };
+		EB5C11D91994BE9600C0EA9F /* Neg.wav in Resources */ = {isa = PBXBuildFile; fileRef = EB5C11D61994BE9600C0EA9F /* Neg.wav */; };
+		EB5C11DA1994BE9600C0EA9F /* Pos.wav in Resources */ = {isa = PBXBuildFile; fileRef = EB5C11D71994BE9600C0EA9F /* Pos.wav */; };
 		EBBDEB25199357620011B135 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBBDEB24199357620011B135 /* Foundation.framework */; };
 		EBBDEB27199357620011B135 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBBDEB26199357620011B135 /* CoreGraphics.framework */; };
 		EBBDEB29199357620011B135 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBBDEB28199357620011B135 /* UIKit.framework */; };
@@ -39,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EB5C11D51994BE9600C0EA9F /* Game.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Game.wav; sourceTree = "<group>"; };
+		EB5C11D61994BE9600C0EA9F /* Neg.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Neg.wav; sourceTree = "<group>"; };
+		EB5C11D71994BE9600C0EA9F /* Pos.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Pos.wav; sourceTree = "<group>"; };
 		EBBDEB21199357620011B135 /* ColorBeat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorBeat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBBDEB24199357620011B135 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EBBDEB26199357620011B135 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -93,6 +99,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB5C11D41994BE9600C0EA9F /* audio */ = {
+			isa = PBXGroup;
+			children = (
+				EB5C11D51994BE9600C0EA9F /* Game.wav */,
+				EB5C11D61994BE9600C0EA9F /* Neg.wav */,
+				EB5C11D71994BE9600C0EA9F /* Pos.wav */,
+			);
+			path = audio;
+			sourceTree = "<group>";
+		};
 		EBBDEB18199357620011B135 = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +142,7 @@
 		EBBDEB2A199357620011B135 /* ColorBeat */ = {
 			isa = PBXGroup;
 			children = (
+				EB5C11D41994BE9600C0EA9F /* audio */,
 				EBBDEB68199368C20011B135 /* View */,
 				EBBDEB36199357620011B135 /* Main_iPhone.storyboard */,
 				EBBDEB39199357620011B135 /* Main_iPad.storyboard */,
@@ -261,7 +278,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBBDEB3B199357620011B135 /* Main_iPad.storyboard in Resources */,
+				EB5C11D81994BE9600C0EA9F /* Game.wav in Resources */,
+				EB5C11DA1994BE9600C0EA9F /* Pos.wav in Resources */,
 				EBBDEB40199357620011B135 /* Images.xcassets in Resources */,
+				EB5C11D91994BE9600C0EA9F /* Neg.wav in Resources */,
 				EBBDEB38199357620011B135 /* Main_iPhone.storyboard in Resources */,
 				EBBDEB2F199357620011B135 /* InfoPlist.strings in Resources */,
 			);
@@ -503,6 +523,7 @@
 				EBBDEB58199357620011B135 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EBBDEB59199357620011B135 /* Build configuration list for PBXNativeTarget "ColorBeatTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +532,7 @@
 				EBBDEB5B199357620011B135 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

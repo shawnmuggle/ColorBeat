@@ -10,6 +10,7 @@
 #import "ResultViewController.h"
 #import "RoundedCornerView.h"
 #import "ColorUtils.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface ColorBeatViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *timerTextView;
@@ -26,7 +27,12 @@
 @property (nonatomic) NSInteger count;
 @property (nonatomic) CGFloat timerFloat;
 
+@property (nonatomic, strong) AVAudioPlayer* playerPos;
+@property (nonatomic, strong) AVAudioPlayer* playerNeg;
+@property (nonatomic, strong) AVAudioPlayer* playerGame;
+
 @end
+
 
 @implementation ColorBeatViewController
 
@@ -73,11 +79,13 @@
     
     if (indexOfTextNameInArray == indexOfButtonIndex)
     {
+        [self.playerPos play];
         self.count += 5;
         self.timerFloat += 1.0;
     }
     else
     {
+        [self.playerNeg play];
         self.count -= 3;
         self.timerFloat -= 1.0;
     }
@@ -137,6 +145,20 @@
     [super viewDidLoad];
     self.timerFloat = TIMER_COUNT;
     [self changePuzzle];
+    
+    NSString *audioPos = [NSString stringWithFormat:@"%@/Pos.wav", [[NSBundle mainBundle] resourcePath]];
+    NSString *audioNeg = [NSString stringWithFormat:@"%@/Neg.wav", [[NSBundle mainBundle] resourcePath]];
+    NSString *audioGame = [NSString stringWithFormat:@"%@/Game.wav", [[NSBundle mainBundle] resourcePath]];
+    
+    NSURL *urlPos = [NSURL fileURLWithPath:audioPos];
+    NSURL *urlNeg = [NSURL fileURLWithPath:audioNeg];
+    NSURL *urlGame = [NSURL fileURLWithPath:audioGame];
+    
+    // NSAssert(url, @"URL is valid.");
+    NSError* error = nil;
+    self.playerPos = [[AVAudioPlayer alloc] initWithContentsOfURL:urlPos error: &error];
+    self.playerNeg = [[AVAudioPlayer alloc] initWithContentsOfURL:urlNeg error: &error];
+    self.playerGame = [[AVAudioPlayer alloc] initWithContentsOfURL:urlGame error: &error];
 }
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
@@ -167,6 +189,8 @@
         if ([segue.destinationViewController isKindOfClass:[ResultViewController class]]) {
             ResultViewController *vc = (ResultViewController *)segue.destinationViewController;
             vc.score = self.count;
+            [self.playerGame play];
+
             self.count = 0;
         }
     }
