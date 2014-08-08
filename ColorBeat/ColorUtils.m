@@ -40,7 +40,7 @@
 
 + (NSArray *) validColorNames
 {
-    return @[@"RED", @"BLUE", @"GREEN", @"YELLOW"];
+    return @[@"PINK", @"BLUE", @"GREEN", @"YELLOW"];
 }
 
 + (NSArray *) validColors
