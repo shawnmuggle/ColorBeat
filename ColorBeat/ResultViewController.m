@@ -27,7 +27,7 @@
         [ColorUtils saveHighestScore:self.score];
     }
     self.scoreRecordText.text = [NSString stringWithFormat:@"HISTORY RECORD: %d", (int)highestScore];
-    self.scoreText.text = [NSString stringWithFormat:@"Score: %d", (int)self.score];
+    self.scoreText.text = [NSString stringWithFormat:@"%d", (int)self.score];
 }
  
 - (void)viewDidLoad

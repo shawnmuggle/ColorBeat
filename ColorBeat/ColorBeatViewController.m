@@ -73,10 +73,13 @@
     
     if (indexOfTextNameInArray == indexOfButtonIndex)
     {
-        self.count += 1;
+        self.count += 5;
+        self.timerFloat += 1.0;
     }
     else
     {
+        self.count -= 3;
+        self.timerFloat -= 1.0;
     }
 }
 
@@ -132,6 +135,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.timerFloat = TIMER_COUNT;
     [self changePuzzle];
 }
 

@@ -32,7 +32,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E8L-q0-J2l">
-                                                <rect key="frame" x="55" y="34" width="10" height="21"/>
+                                                <rect key="frame" x="40" y="34" width="40" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -212,11 +212,25 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="luf-c8-caa">
+                                        <rect key="frame" x="0.0" y="0.0" width="130" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tryAgain:" destination="KAf-ZT-r9e" eventType="touchUpInside" id="SOX-uQ-uxT"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.48481635314090982" green="0.68600183545172466" blue="0.87432238520000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="luf-c8-caa" firstAttribute="leading" secondItem="CrD-er-Etw" secondAttribute="leading" id="1An-5v-Mj0"/>
+                                    <constraint firstItem="luf-c8-caa" firstAttribute="top" secondItem="CrD-er-Etw" secondAttribute="top" id="YHq-zS-m9H"/>
                                     <constraint firstAttribute="height" constant="40" id="YSV-zi-fjg"/>
+                                    <constraint firstAttribute="trailing" secondItem="luf-c8-caa" secondAttribute="trailing" id="YaJ-0F-F9K"/>
                                     <constraint firstAttribute="width" constant="130" id="na7-Qm-nye"/>
+                                    <constraint firstAttribute="bottom" secondItem="luf-c8-caa" secondAttribute="bottom" id="pGR-vf-thj"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3lW-bE-i6f" userLabel="View-Score" customClass="RoundedCornerView">
@@ -252,6 +266,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="cfI-4A-p6z"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <connections>
+                        <outlet property="scoreText" destination="iFU-Fx-cSV" id="5XB-dj-LhD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PuO-3t-WNN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
