@@ -161,6 +161,10 @@
     self.playerPos = [[AVAudioPlayer alloc] initWithContentsOfURL:urlPos error: &error];
     self.playerNeg = [[AVAudioPlayer alloc] initWithContentsOfURL:urlNeg error: &error];
     self.playerGame = [[AVAudioPlayer alloc] initWithContentsOfURL:urlGame error: &error];
+    [self.playerPos setVolume: 0.02];
+    [self.playerNeg setVolume: 0.02];
+    [self.playerGame setVolume: 0.01];
+
 }
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
