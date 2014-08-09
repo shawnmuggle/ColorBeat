@@ -123,7 +123,13 @@
                             <constraint firstAttribute="trailing" secondItem="bSS-EX-fZ5" secondAttribute="trailing" id="zuh-sh-0bj"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Color Beat" id="0i1-le-Wcm"/>
+                    <navigationItem key="navigationItem" title="Color Beat" id="0i1-le-Wcm">
+                        <barButtonItem key="rightBarButtonItem" title="Help" id="ibo-xM-HGz">
+                            <connections>
+                                <segue destination="ucD-xI-ZOm" kind="push" id="soJ-Ne-YYS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <size key="freeformSize" width="320" height="568"/>
                     <connections>
                         <outlet property="buttonsView" destination="MDe-mK-jet" id="y5c-Ef-kLK"/>
@@ -317,7 +323,82 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PuO-3t-WNN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1290" y="138"/>
+            <point key="canvasLocation" x="1358" y="-206"/>
+        </scene>
+        <!--Help View Controller - Help-->
+        <scene sceneID="3AO-eJ-uEL">
+            <objects>
+                <viewController id="ucD-xI-ZOm" customClass="HelpViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XoY-Rc-84w"/>
+                        <viewControllerLayoutGuide type="bottom" id="oLi-99-Ay1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LTh-fK-Xwy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eKR-vP-2tB">
+                                <rect key="frame" x="0.0" y="65" width="320" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tap on the color that text describes!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vk-Pu-p0e">
+                                        <rect key="frame" x="20" y="21" width="280" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="PmR-rt-lBO"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hUg-70-0hj">
+                                <rect key="frame" x="0.0" y="124" width="280" height="444"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mmo-Qu-o6z">
+                                        <rect key="frame" x="0.0" y="371" width="280" height="73"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="73" id="Q20-5c-QcS"/>
+                                        </constraints>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="backGame:" destination="ucD-xI-ZOm" eventType="touchUpInside" id="lvO-4J-ro7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Mmo-Qu-o6z" secondAttribute="trailing" id="7Jj-N8-mA1"/>
+                                    <constraint firstItem="Mmo-Qu-o6z" firstAttribute="leading" secondItem="hUg-70-0hj" secondAttribute="leading" id="DZy-va-A2c"/>
+                                    <constraint firstAttribute="bottom" secondItem="Mmo-Qu-o6z" secondAttribute="bottom" id="yO2-X3-7TP"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hUg-70-0hj" firstAttribute="leading" secondItem="LTh-fK-Xwy" secondAttribute="leading" id="2sa-ew-clM"/>
+                            <constraint firstAttribute="trailing" secondItem="hUg-70-0hj" secondAttribute="trailing" constant="40" id="BaC-Ch-eWV"/>
+                            <constraint firstItem="eKR-vP-2tB" firstAttribute="leading" secondItem="LTh-fK-Xwy" secondAttribute="leading" id="L7I-Re-csU"/>
+                            <constraint firstItem="eKR-vP-2tB" firstAttribute="top" secondItem="XoY-Rc-84w" secondAttribute="bottom" constant="1" id="QDt-zP-NrJ"/>
+                            <constraint firstAttribute="trailing" secondItem="eKR-vP-2tB" secondAttribute="trailing" id="bMT-uD-l1w"/>
+                            <constraint firstItem="hUg-70-0hj" firstAttribute="top" secondItem="XoY-Rc-84w" secondAttribute="bottom" constant="60" id="dh0-wx-yuH"/>
+                            <constraint firstItem="oLi-99-Ay1" firstAttribute="top" secondItem="hUg-70-0hj" secondAttribute="bottom" id="oD4-No-nyo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Help" id="LR0-2a-FbO"/>
+                    <connections>
+                        <outlet property="imageView" destination="hUg-70-0hj" id="tPu-B7-VFn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sr7-zo-Kyw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1370" y="479"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
