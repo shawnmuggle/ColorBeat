@@ -48,7 +48,8 @@
     [self.navigationController popViewControllerAnimated:TRUE];
 }
 
-- (IBAction)shareScore:(id)sender {
+- (void)shareScore
+{
     NSString *textToShare = [NSString stringWithFormat:@"I scored %d points at #ColorBeat, a game to test your brain power!", (int)self.score];
     NSURL *appURL = [NSURL URLWithString:@"http://itunes.apple.com/app/colorbeat/id840919914"];
     // UIImage *image = [UIImage imageNamed:@"screenshot"];
@@ -68,6 +69,19 @@
     activityVC.excludedActivityTypes = excludeActivities;
     
     [self presentViewController:activityVC animated:YES completion:nil];
+}
+
+#define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
+
+- (IBAction)shareScore:(id)sender {
+    if (SYSTEM_VERSION_LESS_THAN(@"7.0")) {
+        [self.navigationController popViewControllerAnimated:TRUE];
+        NSLog(@"Old Version");
+    }
+    else {
+        [self shareScore];
+        NSLog(@"New Version");
+    }
 }
 
 
