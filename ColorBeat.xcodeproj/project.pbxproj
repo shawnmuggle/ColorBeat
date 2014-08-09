@@ -248,6 +248,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Le Yu";
 				TargetAttributes = {
+					EBBDEB20199357620011B135 = {
+						DevelopmentTeam = 3LXNHMZ2K4;
+					};
 					EBBDEB44199357620011B135 = {
 						TestTargetID = EBBDEB20199357620011B135;
 					};
@@ -443,9 +446,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ColorBeat/ColorBeat-Prefix.pch";
 				INFOPLIST_FILE = "ColorBeat/ColorBeat-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -456,9 +461,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ColorBeat/ColorBeat-Prefix.pch";
 				INFOPLIST_FILE = "ColorBeat/ColorBeat-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
