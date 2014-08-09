@@ -136,7 +136,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="908" y="138"/>
+            <point key="canvasLocation" x="820" y="138"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="myT-p9-axv">
@@ -155,7 +155,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CCW-qu-rs5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="526" y="138"/>
+            <point key="canvasLocation" x="341" y="138"/>
         </scene>
         <!--Result View Controller - ResultVC-->
         <scene sceneID="G2i-VZ-sId">
@@ -179,7 +179,7 @@
                                 <color key="textColor" red="0.39542809311224492" green="0.37156742644121815" blue="0.34916466817997854" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7kY-4d-92X" userLabel="View-Score" customClass="RoundedCornerView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7kY-4d-92X" userLabel="View-Best" customClass="RoundedCornerView">
                                 <rect key="frame" x="20" y="129" width="130" height="60"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
@@ -229,7 +229,7 @@
                                     <constraint firstAttribute="height" constant="60" id="vtQ-6T-3lm"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CrD-er-Etw" userLabel="View-Score" customClass="RoundedCornerView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CrD-er-Etw" userLabel="View-Retry" customClass="RoundedCornerView">
                                 <rect key="frame" x="95" y="444" width="130" height="40"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
@@ -261,10 +261,20 @@
                                     <constraint firstAttribute="bottom" secondItem="luf-c8-caa" secondAttribute="bottom" id="pGR-vf-thj"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3lW-bE-i6f" userLabel="View-Score" customClass="RoundedCornerView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3lW-bE-i6f" userLabel="View-Share" customClass="RoundedCornerView">
                                 <rect key="frame" x="95" y="503" width="130" height="40"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFa-EN-WKv">
+                                        <rect key="frame" x="0.0" y="0.0" width="130" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="shareScore:" destination="KAf-ZT-r9e" eventType="touchUpInside" id="Kxj-tE-m7A"/>
+                                        </connections>
+                                    </button>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SHARE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="01M-mo-BoY">
                                         <rect key="frame" x="37" y="9" width="57" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -275,8 +285,12 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.48481635309999999" green="0.68600183550000005" blue="0.87432238520000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="LFa-EN-WKv" firstAttribute="leading" secondItem="3lW-bE-i6f" secondAttribute="leading" id="IRP-6z-AQj"/>
                                     <constraint firstAttribute="height" constant="40" id="k5G-Yd-Fnq"/>
                                     <constraint firstAttribute="width" constant="130" id="lzB-HS-1z4"/>
+                                    <constraint firstItem="LFa-EN-WKv" firstAttribute="top" secondItem="3lW-bE-i6f" secondAttribute="top" id="nOC-zS-n7P"/>
+                                    <constraint firstAttribute="bottom" secondItem="LFa-EN-WKv" secondAttribute="bottom" id="s17-q5-xjW"/>
+                                    <constraint firstAttribute="trailing" secondItem="LFa-EN-WKv" secondAttribute="trailing" id="ypB-0m-29d"/>
                                 </constraints>
                             </view>
                         </subviews>
