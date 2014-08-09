@@ -15,21 +15,19 @@
 @interface ColorBeatViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *timerTextView;
 @property (weak, nonatomic) IBOutlet UILabel *scoreView;
-
 @property (weak, nonatomic) IBOutlet RoundedCornerView *quizColorView;
 @property (weak, nonatomic) IBOutlet UILabel *quizTextView;
-
 @property (weak, nonatomic) IBOutlet UIView *buttonsView;
-
-
 @property (weak, nonatomic) NSTimer *timer;
-
-@property (nonatomic) NSInteger count;
-@property (nonatomic) CGFloat timerFloat;
 
 @property (nonatomic, strong) AVAudioPlayer* playerPos;
 @property (nonatomic, strong) AVAudioPlayer* playerNeg;
 @property (nonatomic, strong) AVAudioPlayer* playerGame;
+
+@property (nonatomic) NSInteger count;
+@property (nonatomic) CGFloat timerFloat;
+@property (nonatomic) BOOL isGameStarted;
+
 
 @end
 
@@ -93,6 +91,9 @@
 
 - (void)updateTimer:(id)sender
 {
+    if (!self.isGameStarted)
+        return;
+    
     self.timerFloat -= 0.1;
     if (self.timerFloat <= 0) {
         [self performSegueWithIdentifier:@"Result" sender:self];
@@ -105,6 +106,7 @@
     NSUInteger buttonIndex = [self.buttonsView.subviews indexOfObject:buttonView];
     [self checkAnswer:buttonIndex];
     [self changePuzzle];
+    self.isGameStarted = YES;
     
 }
 
@@ -192,6 +194,7 @@
             [self.playerGame play];
 
             self.count = 0;
+            self.isGameStarted = NO;
         }
     }
 
