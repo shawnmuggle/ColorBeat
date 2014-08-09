@@ -15,13 +15,28 @@
 
 @implementation HelpViewController
 
-- (void) viewDidLoad
+- (void) updateImage
 {
-    [super viewDidLoad];
+    for (UIView *view in self.imageView.subviews) {
+        [view removeFromSuperview];
+    }
+    
     UIImageView *imageSubView = [[UIImageView alloc] initWithFrame:self.imageView.bounds];
     imageSubView.image = [UIImage imageNamed:@"screenshot2"];
     [self.imageView addSubview:imageSubView];
-    
+}
+
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+{
+    [self updateImage];
+}
+
+- (void) viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self updateImage];
+
     
 }
 - (IBAction)backGame:(id)sender {
