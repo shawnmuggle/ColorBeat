@@ -51,7 +51,7 @@
 - (void)shareScore
 {
     NSString *textToShare = [NSString stringWithFormat:@"I scored %d points at #ColorBeat, a game to test your brain power!", (int)self.score];
-    NSURL *appURL = [NSURL URLWithString:@"http://appstore.com/colorbeat"];
+    NSURL *appURL = [NSURL URLWithString:@"http://appstore.com/com-billyue-colorbeat"];
     // UIImage *image = [UIImage imageNamed:@"screenshot"];
  
     NSArray *objectsToShare = @[textToShare, appURL];
