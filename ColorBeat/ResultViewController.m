@@ -51,11 +51,11 @@
 - (void)shareScore
 {
     NSString *textToShare = [NSString stringWithFormat:@"I scored %d points at #ColorBeat, a game to test your brain power!", (int)self.score];
-    NSURL *appURL = [NSURL URLWithString:@" http://appstore.com/colorbeat"];
+    NSURL *appURL = [NSURL URLWithString:@"http://appstore.com/colorbeat"];
     // UIImage *image = [UIImage imageNamed:@"screenshot"];
-    
+ 
     NSArray *objectsToShare = @[textToShare, appURL];
-    
+ 
     UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:objectsToShare applicationActivities:nil];
     
     NSArray *excludeActivities = @[UIActivityTypeAirDrop,
@@ -65,10 +65,10 @@
                                    UIActivityTypeAddToReadingList,
                                    UIActivityTypePostToFlickr,
                                    UIActivityTypePostToVimeo];
-    
+ 
     activityVC.excludedActivityTypes = excludeActivities;
-    
     [self presentViewController:activityVC animated:YES completion:nil];
+    
 }
 
 #define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)

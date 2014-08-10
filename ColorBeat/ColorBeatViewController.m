@@ -62,8 +62,6 @@
         colorIndex2++;
     }
 
-    UIColor *colorx = colors[colorIndex1];
-    NSLog(@"Color: %@", colorx);
     self.quizColorView.backgroundColor = colors[colorIndex1];
     self.quizTextView.textColor = colors[colorIndex2];
     self.quizTextView.text = [ColorUtils randomColorText];
